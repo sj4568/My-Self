@@ -189,3 +189,79 @@ margin:20px ;
 margin-top: -40px;
 
 }
+@media screen and (max-width:700px){
+
+body { 
+
+
+
+
+}
+.navbar{
+position:relative;
+width:50px;
+height: 50px;
+background:red ;
+margin-left:-245px;
+z-index:200 ;
+}
+
+.navbar ul{
+position:fixed;
+top:50px ;
+width: 100%;
+
+margin-top:-50px ;
+background: white;
+left:0;
+z-index:-2 ;
+overflow: hidden;
+transition :1s;
+height:50px ;
+}
+.navbar ul:after{
+content:'';
+position:absolute  ;
+height: 10px;
+width:50px;
+top: 10px;
+left:0;
+background: red;
+pointer-events: none;
+}
+.navbar ul:before{
+content:'';
+position:absolute  ;
+height: 10px;
+width:50px;
+top: 25px;
+left:0;
+pointer-events:none ;
+background: red;
+}
+.navbar ul:hover:before{
+transform:rotate(60deg);
+top: 15px;
+}
+.navbar ul:hover:after{
+transform:rotate(-60deg);
+top: 15px;
+}
+.navbar ul:hover{
+height:450px ;
+transition:1s;
+
+
+}
+.navbar ul:after:hover .navbar ul{
+height: 50px;
+}
+.navbar ul li{
+margin-top: 30px;
+display: block;
+
+line-height:5;
+}
+
+}
+
